@@ -1,7 +1,6 @@
 version: '3'
 services:
   # postgres-order:
-  # gerb gerb
   #   image: postgres:latest
   #   environment:
   #     POSTGRES_DB: microservice_db_order
