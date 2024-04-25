@@ -15,7 +15,7 @@ class Document(BaseModel):
     ord_id: UUID
     type: str
     customer_info: str
-    create_date: datetime
+    create_date: str
     doc: str
 
 
