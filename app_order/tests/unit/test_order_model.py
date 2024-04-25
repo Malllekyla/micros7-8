@@ -15,7 +15,7 @@ def test_order_creation():
     address_info = "address_info"
     customer_info = "customer_info"
     create_date = str(datetime.now().date())
-    completion_date = str(datetime.now().date()),
+    completion_date = str(datetime.now().date())
     order_info = "order_info"
 
     order = Order(ord_id=ord_id, status=status, address_info=address_info, customer_info=customer_info,
