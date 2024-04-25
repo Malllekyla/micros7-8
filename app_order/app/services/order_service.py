@@ -22,7 +22,7 @@ class OrderService():
 
     def create_order(self, address_info: str, customer_info: str, order_info: str) -> Order:
         order = Order(ord_id=uuid4(), status=OrderStatus.CREATE, address_info=address_info, customer_info=customer_info,
-                      create_date=datetime.now(), completion_date=None, order_info=order_info)
+                      create_date=str(datetime.now().date()), completion_date=None, order_info=order_info)
         return self.order_repo.create_order(order)
     
     def get_order_by_id(self, id: UUID) -> Order:
@@ -40,7 +40,7 @@ class OrderService():
             "doc_id": uuid4(),
             "ord_id": id,
             "type": "Test Type",
-            "create_date": datetime.now(),
+            "create_date": str(datetime.now().date()),
             "doc": "Test Document",
             "customer_info": order.customer_info
         }
@@ -87,7 +87,7 @@ class OrderService():
             raise ValueError
 
         order.status = OrderStatus.DONE
-        order.completion_date = datetime.now()
+        order.completion_date = str(datetime.now().date())
         return self.order_repo.set_status(order)
 
     def cancel_order(self, id: UUID) -> Order:

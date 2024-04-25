@@ -14,7 +14,7 @@ def test_order_creation():
     status = OrderStatus.CREATE
     address_info = "address_info"
     customer_info = "customer_info"
-    create_date = datetime.now()
+    create_date = str(datetime.now().date())
     completion_date = None
     order_info = "order_info"
 

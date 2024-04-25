@@ -31,7 +31,7 @@ class DocumentService():
         return self.document_repo.get_document_by_id(id)
 
     def create_document(self, ord_id: UUID, type: str, doc: str, customer_info: str) -> Document:
-        document = Document(doc_id=uuid4(), ord_id=ord_id, type=type, create_date=datetime.now(),
+        document = Document(doc_id=uuid4(), ord_id=ord_id, type=type, create_date=str(datetime.now().date()),
                             doc=doc, customer_info=customer_info)
 
         return self.document_repo.create_document(document)

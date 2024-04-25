@@ -24,7 +24,7 @@ def document_id() -> UUID:
 def first_document() -> Document:
     return Document(doc_id=UUID('31babbb3-5541-4a2a-8201-537cdff25fed'),
                     ord_id=UUID('31babbb3-5541-4a2a-8201-537cdff25fed'),
-                    type='test_doc_type_1', create_date=datetime.now(),
+                    type='test_doc_type_1', create_date=str(datetime.now().date()),
                     doc='test_doc_doc_1', customer_info='test_customer_info_0')
 
 
@@ -32,7 +32,7 @@ def first_document() -> Document:
 def second_document() -> Document:
     return Document(doc_id=UUID('45309954-8e3c-4635-8066-b342f634252c'),
                     ord_id=UUID('45309954-8e3c-4635-8066-b342f634252c'),
-                    type='test_doc_type_2', create_date=datetime.now(),
+                    type='test_doc_type_2', create_date=str(datetime.now().date()),
                     doc='test_doc_doc_2', customer_info='test_customer_info_1')
 
 
