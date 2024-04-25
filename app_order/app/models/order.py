@@ -26,7 +26,7 @@ class Order(BaseModel):
     address_info: str
     customer_info: str
     create_date: str
-    completion_date: Optional[datetime] = None
+    completion_date: str
     order_info: str
 
 

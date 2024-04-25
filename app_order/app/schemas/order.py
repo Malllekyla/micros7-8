@@ -13,5 +13,5 @@ class Order(Base):
     address_info = Column(String, nullable=False)
     customer_info = Column(String, nullable=False)
     create_date = Column(String, nullable=False)
-    completion_date = Column(String)
+    completion_date = Column(String, nullable=False)
     order_info = Column(String, nullable=False)
