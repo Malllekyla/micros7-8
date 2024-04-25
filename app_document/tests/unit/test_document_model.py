@@ -21,7 +21,7 @@ def test_document_creation():
     doc_id = uuid4()
     ord_id = uuid4()
     type = 'test_doc_type_1'
-    create_date = datetime.now()
+    create_date = str(datetime.now().date())
     doc = 'test_doc_doc_1'
     customer_info = 'test_customer_info_0'
 

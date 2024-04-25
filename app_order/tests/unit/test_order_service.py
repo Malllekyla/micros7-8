@@ -35,7 +35,7 @@ def test_create_first_order(
     assert order.address_info == address_info
     assert order.customer_info == customer_info
     assert order.status == OrderStatus.CREATE
-    assert order.completion_date == None
+    assert order.completion_date == str(datetime.now().date())
     assert order.order_info == order_info
 
 
@@ -48,7 +48,7 @@ def test_create_second_order(
     assert order.address_info == address_info
     assert order.customer_info == customer_info
     assert order.status == OrderStatus.CREATE
-    assert order.completion_date == None
+    assert order.completion_date == str(datetime.now().date())
     assert order.order_info == order_info
 
 

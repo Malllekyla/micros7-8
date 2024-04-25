@@ -12,6 +12,6 @@ class Order(Base):
     status = Column(Enum(OrderStatus), nullable=False)
     address_info = Column(String, nullable=False)
     customer_info = Column(String, nullable=False)
-    create_date = Column(DateTime, nullable=False)
-    completion_date = Column(DateTime)
+    create_date = Column(String, nullable=False)
+    completion_date = Column(String, nullable=False)
     order_info = Column(String, nullable=False)

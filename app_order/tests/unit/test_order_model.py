@@ -14,8 +14,8 @@ def test_order_creation():
     status = OrderStatus.CREATE
     address_info = "address_info"
     customer_info = "customer_info"
-    create_date = datetime.now()
-    completion_date = None
+    create_date = str(datetime.now().date())
+    completion_date = str(datetime.now().date())
     order_info = "order_info"
 
     order = Order(ord_id=ord_id, status=status, address_info=address_info, customer_info=customer_info,
@@ -40,6 +40,6 @@ def test_order_status_required():
         Order(ord_id=uuid4(),
               address_info="address_info",
               customer_info="customer_info",
-              create_date=datetime.now(),
-              completion_date=None,
+              create_date=str(datetime.now().date()),
+              completion_date=str(datetime.now().date()),
               order_info="order_info")
