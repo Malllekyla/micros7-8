@@ -19,7 +19,7 @@ def test_add_first_document() -> None:
     document = Document(doc_id=UUID('31babbb3-5541-4a2a-8201-537cdff25fed'),
                         ord_id=uuid4(),
                         type='test_doc_type_1',
-                        create_date=datetime.now(),
+                        create_date=str(datetime.now().date()),
                         doc='test_doc_doc_1',
                         customer_info='test_customer_info_0')
     assert document_test_repo.create_document(document) == document
@@ -29,7 +29,7 @@ def test_add_first_document_repeat() -> None:
     document = Document(doc_id=UUID('31babbb3-5541-4a2a-8201-537cdff25fed'),
                         ord_id=uuid4(),
                         type='test_doc_type_1',
-                        create_date=datetime.now(),
+                        create_date=str(datetime.now().date()),
                         doc='test_doc_doc_1',
                         customer_info='test_customer_info_0')
     # document_test_repo.create_document(document)
@@ -41,7 +41,7 @@ def test_get_document_by_id() -> None:
     document = Document(doc_id=uuid4(),
                         ord_id=uuid4(),
                         type='test_doc_type_1',
-                        create_date=datetime.now(),
+                        create_date=str(datetime.now().date()),
                         doc='test_doc_doc_1',
                         customer_info='test_customer_info_0')
     document_test_repo.create_document(document)

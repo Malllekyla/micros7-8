@@ -40,6 +40,6 @@ def test_order_status_required():
         Order(ord_id=uuid4(),
               address_info="address_info",
               customer_info="customer_info",
-              create_date=datetime.now(),
+              create_date=str(datetime.now().date()),
               completion_date=None,
               order_info="order_info")
