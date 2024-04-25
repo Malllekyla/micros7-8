@@ -90,3 +90,4 @@ def test_set_status(first_order: Order, order_repo: OrderRepo) -> None:
 def test_delete_created_order(first_order: Order, second_order: Order, order_repo: OrderRepo) -> None:
     assert order_repo.delete_order_by_id(first_order.ord_id) == first_order
     assert order_repo.delete_order_by_id(second_order.ord_id) == second_order
+
