@@ -41,5 +41,5 @@ def test_order_status_required():
               address_info="address_info",
               customer_info="customer_info",
               create_date=str(datetime.now().date()),
-              completion_date=None,
+              completion_date=str(datetime.now().date()),
               order_info="order_info")
